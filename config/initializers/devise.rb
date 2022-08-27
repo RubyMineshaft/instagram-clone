@@ -26,6 +26,9 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'no-reply@instaclone.com'
 
+  # Fixes no_method error for account_url after sign_up
+  config.navigational_formats = ['*/*', :html, :turbo_stream]
+
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
